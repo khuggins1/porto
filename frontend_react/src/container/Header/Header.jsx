@@ -11,7 +11,8 @@ const Header = () => {
     <div className="app__header app__flex">
       <motion.div
       whileInView={{ x: [-100, 0 ], opacity: [0, 1]}}
-      transition= {{duration: 0.5 }}
+      //slide in motion
+      transition= {{duration: 2 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
@@ -22,7 +23,32 @@ const Header = () => {
           <h1 className="head-text">Kassim</h1>
         </div>
         </div>
+        <div className="tag-cmp app__flex">
+          <p className="p-text">Web Developer</p>
+          <p className="p-text"> Freelancer</p>
         </div>
+        </div>
+      </motion.div>
+      
+      <motion.div 
+       whileInView={{ opacity: [0, 1]}}
+       //slide in motion
+       transition= {{duration: 2, delayChildren: 0.5 }}
+       className="app__header-img"
+      >
+        <img src={images.profile} alt="profile_bg" />
+        <motion.img
+        whileInView={{ scale: [0, 1]}}
+        //slide in motion
+        transition= {{duration: 1, ease: 'easeInOut' }}
+        className="app__header-img" 
+        src={images.circle}
+        alt="profile_circle"
+        className="overlay_circle"
+        >
+
+        </motion.img>
+
       </motion.div>
       </div>
   )
