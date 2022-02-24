@@ -2,12 +2,24 @@ import React, {useState, useEffect } from 'react';
 
 import { motion } from 'framer-motion';
 
+import { images } from '../../constants';
+
 import './About.scss';
 
+
+const abouts =  
+[
+  {title: 'Web Development', description: 'I am a good web developer.', imgUrl: ''},
+  {title: 'Web Design', description: 'I am a good web developer.', imgUrl: ''},
+  {title: 'UX/UI', description: 'I am a good web developer.', imgUrl: ''},
+  {title: 'Web Animations', description: 'I am a good web developer.', imgUrl: ''},
+];
+
 const About = () => {
+
   return (
     <>
-    <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
+    <h2 className="head-text">I Know that <span>Good Development</span> <br />means  <span>Good Business</span></h2>
 
     <div className="app__profiles">
       {abouts.map((about, index) => (
